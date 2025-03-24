@@ -32,17 +32,20 @@ const Details = ({ product, onClose }: ProductProps & { onClose: () => void }) =
                 <Typography gutterBottom>{product.category} </Typography>
             </DialogTitle>
             <DialogContent dividers sx={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                <Box
-                    sx={{
-                        width: 500,
-                        height: 200,
-                        backgroundImage: `url(${product.image})`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        borderTopLeftRadius: 4,
-                        borderTopRightRadius: 4,
-                    }}
-                />
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                    <Box
+                        sx={{
+                            width: 500,
+                            height: 200,
+                            backgroundImage: `url(${product.image})`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                            borderTopLeftRadius: 4,
+                            borderTopRightRadius: 4,
+                        }}
+                    />
+                </Box>
+
                 <Typography gutterBottom={true} component="div">
                     <div><strong>תיאור:</strong> {product.description}</div>
                     <div><strong>מחיר:</strong> {product.price}₪</div>
